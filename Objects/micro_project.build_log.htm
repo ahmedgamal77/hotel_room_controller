@@ -1,0 +1,93 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.30.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ahmed gamal, faculty, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.30.0.0
+Toolchain Path:  D:\keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14
+Assembler:       Armasm.exe V6.14
+Linker/Locator:  ArmLink.exe V6.14
+Library Manager: ArmAr.exe V6.14
+Hex Converter:   FromElf.exe V6.14
+CPU DLL:         SARMCM3.DLL V5.30.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.3.0
+Dialog DLL:      TCM.DLL V1.42.0.0
+ 
+<h2>Project:</h2>
+D:\downloads\kolya_projects\micro\project\hotel_room_controller\micro_project.uvprojx
+Project File Date:  05/28/2020
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14', folder: 'D:\keil\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+main.c(3): warning: In file included from...
+./UART_driver.h(7): warning: no newline at end of file [-Wnewline-eof]
+void UART0_send(char data);
+                           ^
+main.c(4): warning: In file included from...
+./portF.h(7): warning: no newline at end of file [-Wnewline-eof]
+void LED_OFF(void);
+                   ^
+main.c(9): warning: no previous prototype for function 'SystemInit' [-Wmissing-prototypes]
+void SystemInit(){} 
+     ^
+main.c(9): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void SystemInit(){} 
+^
+static 
+main.c(4): warning: In file included from...
+./portF.h(3): warning: no previous extern declaration for non-static variable 'password' [-Wmissing-variable-declarations]
+char password[4];       //variable to save the password in it 
+     ^
+./portF.h(3): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char password[4];       //variable to save the password in it 
+^
+4 warnings generated.
+compiling main.c...
+linking...
+.\Objects\micro_project.axf: Error: L6200E: Symbol password multiply defined (by main.o and portf.o).
+.\Objects\micro_project.axf: Error: L6200E: Symbol SystemInit multiply defined (by system_tm4c123.o and main.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 2 error messages.
+".\Objects\micro_project.axf" - 2 Error(s), 4 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  D:\keil\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  D:\keil\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+      Source file:   Device\Source\system_TM4C123.c
+      Include file:  Device\Include\TM4C123\TM4C123.h
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
