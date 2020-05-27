@@ -6,23 +6,24 @@ void check_options (char opt);
 void solenoid_locked (void);
 void solenoid_unlocked (void);  
 _Bool password_checker(char pass[]);	
-void SystemInit(){} 
+char password[4];	//variable to save the password in it 
+//void SystemInit(){} 
 int main(void){
 	PortF_init();
 	UART_init();
 	while(1){
 		char option;
 		// option = UART_receive() // to get the option from the uart 
-		option = '0';
+		option = '0'; //check in 
 		check_options(option);
-		option = '3';
+		option = '3'; // enter the room
 		check_options(option);
 		
-		option='1';
+		option='1'; // check out
 		check_options(option);
-		option = '0';
+		option = '0'; //check in
 		check_options(option);
-		option = '2';
+		option = '2'; //room service 
 		check_options(option);
 		
 		
@@ -47,6 +48,8 @@ void check_options (char opt)	//el mfrod el option hena yegi mn el uart
 					//password[i]=UART_receive(); //getting password from uart
 				password[i]='1';
 			}
+			solenoid_locked ();	
+			
 				
 	 }
 	 
