@@ -1,5 +1,5 @@
 #include "stdint.h"
-#include "D:/keil/EE319KwareSpring2020/inc/TM4C123GH6PM.h"
+#include "TM4C123GH6PM.h"
 #include "UART_driver.h"
 #include "portF.h"
 void check_options (char opt);
@@ -71,7 +71,7 @@ void check_options (char opt)	//el mfrod el option hena yegi mn el uart
 		  char pa[4];
 		 	for ( i = 0 ; i < 4 ; i++)
 			{
-					//password[i]=UART_receive(); //getting password from uart
+					//password[i]=KeyPad_getPressedKey(); //getting password from the keypad
 				pa[i]='1';
 			}
 			if(password_checker(pa)) {
