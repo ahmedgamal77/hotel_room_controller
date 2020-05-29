@@ -1,5 +1,5 @@
 #include "stdint.h"
-#include "TM4C123GH6PM.h"
+#include "tm4c123gh6pm.h"
 #include "UART_driver.h"
 #include "portF.h"
 void check_options (char opt);
