@@ -17,4 +17,6 @@
 
 /***  functions proto types *///
 uint16 KeyPad_getPressedKey(void);
+void PortC_init(void);
+void PortD_init(void);
 #endif /*KEYPAD_H_*/

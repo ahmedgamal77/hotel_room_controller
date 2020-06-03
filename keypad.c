@@ -45,7 +45,25 @@ uint16 KeyPad_getPressedKey(void)
 		}
 	}	
 }
+void PortC_init(void)
+{	
+	SYSCTL_RCGCGPIO_R |= 0x00000004; //portC activated
+	while( (SYSCTL_RCGCGPIO_R & 0x04)==0 ) ;   
+	GPIO_PORTC_DIR_R = 0X00; //input 
+	GPIO_PORTC_DEN_R = 0XFF;  //enable digital
+	GPIO_PORTC_DATA_R=0x00; 
+		
+}
 
+void PortD_init(void)
+{	
+	SYSCTL_RCGCGPIO_R |= 0x00000008; //portD activated
+	while( (SYSCTL_RCGCGPIO_R & 0x08)==0 ) ; 
+	GPIO_PORTD_DIR_R = 0X00 ; //input 
+	GPIO_PORTD_DEN_R = 0XFF;  //enable digital
+	GPIO_PORTD_DATA_R=0x00; 
+		
+}
 //Function_2_Defention 
 #if (N_col == 4)
  
