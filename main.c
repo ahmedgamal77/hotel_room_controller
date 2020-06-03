@@ -78,7 +78,7 @@ void check_options (char opt)	//el mfrod el option hena yegi mn el uart
 		 	for ( i = 0 ; i < 4 ; i++)
 			{
 					password[i]=UART_receive(); //getting password from uart
-				password[i]='1';
+				
 			}
 			
 			solenoid_locked ();	
@@ -115,7 +115,7 @@ void get_password(void){
 		  char pa[4];
 		 	for ( i = 0 ; i < 4 ; i++)
 			{
-					password[i]=(char)KeyPad_getPressedKey(); //getting password from the keypad
+					pa[i]=(char)KeyPad_getPressedKey(); //getting password from the keypad
 				
 			}
 			if(password_checker(pa)) {

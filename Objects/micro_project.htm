@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\micro_project.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\micro_project.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Jun  3 02:19:26 2020
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6140002: Last Updated: Wed Jun  3 02:39:44 2020
 <BR><P>
 <H3>Maximum Stack Usage =         44 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -1304,8 +1304,8 @@ Global Symbols
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;check_options
 </UL>
 
-<P><STRONG><a name="[8b]"></a>check_options</STRONG> (Thumb, 64 bytes, Stack size 24 bytes, main.o(.text.check_options))
-<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = check_options
+<P><STRONG><a name="[8b]"></a>check_options</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, main.o(.text.check_options))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = check_options
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_ON
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LED_OFF
@@ -1314,7 +1314,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[8f]"></a>get_password</STRONG> (Thumb, 44 bytes, Stack size 24 bytes, main.o(.text.get_password))
+<P><STRONG><a name="[8f]"></a>get_password</STRONG> (Thumb, 40 bytes, Stack size 24 bytes, main.o(.text.get_password))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = get_password &rArr; KeyPad_getPressedKey
 </UL>
 <BR>[Calls]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;password_checker
